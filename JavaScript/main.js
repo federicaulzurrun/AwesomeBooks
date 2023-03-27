@@ -1,20 +1,21 @@
 //  dynamic creation of added books
-const addedBooks = document.querySelector('#book-list');  
+const addedBooks = document.querySelector('#book-list');
 // Empty array for books
 let books = [];
+let removeBtn = [];
 const submit = document.querySelector('#submit');
 
 // function to add new books to the book array
 function addBooks() {
   const title = document.querySelector('#title');
   const author = document.querySelector('#author');
-  //if statement to push new book into array if empty it won't be added
+  // if statement to push new book into array if empty it won't be added
   if (title.value !== '' && author.value !== '') {
     books.push({
       title: title.value,
       author: author.value,
     });
-// save book to localstorage separatedly
+    // save book to localstorage separatedly
     localStorage.setItem('createdBooks', JSON.stringify(books));
     title.value = ' ';
     author.value = ' ';
@@ -27,7 +28,7 @@ function remove(index) {
   localStorage.setItem('createdBooks', JSON.stringify(books));
 }
 
-//inject book in HTML and print it if added or removed
+// inject book in HTML and print it if added or removed
 function print() {
   addedBooks.innerHTML = ' ';
   for (let i = 0; i < books.length; i += 1) {
@@ -57,13 +58,11 @@ function print() {
 // print local storage when window loads
 
 window.addEventListener('load', () => {
-    if (localStorage.getItem('createdBooks')) {
-        books = JSON.parse(localStorage.getItem('createdBooks'));
-}
-print();
+  if (localStorage.getItem('createdBooks')) {
+    books = JSON.parse(localStorage.getItem('createdBooks'));
+  }
+  print();
 });
-
-//create addEventListener function to submit button, prevent errors adding (e) and e.preventDefault()
 submit.addEventListener('click', (e) => {
   e.preventDefault();
   addBooks();
