@@ -1,7 +1,7 @@
 //  dynamic creation of added books
 const addedBooks = document.querySelector('#book-list');  
 // Empty array for books
-const books = [];
+let books = [];
 const submit = document.querySelector('#submit');
 
 function addBooks() {
@@ -13,7 +13,7 @@ function addBooks() {
       author: author.value,
     });
 
-    localStorage.setItem('books', JSON.stringify(books));
+    localStorage.setItem('createdBooks', JSON.stringify(books));
     title.value = ' ';
     author.value = ' ';
   }
@@ -23,7 +23,7 @@ function addBooks() {
 
 function remove(index) {
   books.splice(index, 1);
-  localStorage.setItem('books', JSON.stringify(books));
+  localStorage.setItem('createdBooks', JSON.stringify(books));
 }
 
 function print() {
@@ -51,6 +51,15 @@ function print() {
     });
   }
 }
+
+// printed local storage when window loads
+
+window.addEventListener('load', () => {
+    if (localStorage.getItem('createdBooks')) {
+        books = JSON.parse(localStorage.getItem('createdBooks'));
+}
+print();
+});
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
