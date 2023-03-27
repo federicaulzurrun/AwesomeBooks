@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AwesomeBooks</title>
+</head>
+<body>
+    <main>
+        <h1>Awesome Books</h1>
+        <div class="book-list-container">
+            <h2 class="subtitle">Book List</h2>
+            <!--JavaScript Dynamic Book List-->
+            <div class="book-list" id="book-list"></div>
+        </div>
+    </main>
+
+    <!--Add a book form-->
+    <div class="form-container">
+        <h2 class="subtitle">Add a Book</h2>
+        <form id="add-form">
+            <input type="text" required placeholder="Title of the book" id="title">
+            <input type="text" required placeholder="Author of the book" id="author">
+            <button id="add-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="./JavaScript/main.js"></script>   
+</body>
+</html>
