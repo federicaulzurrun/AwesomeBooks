@@ -1,5 +1,6 @@
+//  dynamic creation of added books
+const addedBooks = document.querySelector('#book-list');  
 // Empty array for books
-
 const books = [];
 const title = document.querySelector('#title');
 const author = document.querySelector('#author');
@@ -15,4 +16,47 @@ submit.addEventListener('click', (e) => {
   console.log(books);
 
   localStorage.setItem('books', JSON.stringify(books));
+  title.value = ' ';
+  author.value = ' ';
 });
+
+// remove a book from books array
+
+function remove(index) {
+    books.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(books));
+ }
+
+ function print() {
+    addedBooks.innerHTML = ' ';
+    for (let i = 0; i < books.length; i+= 1) {
+    let html = `
+    <div class="newBook">
+      <div class="book-info">
+        <div class="title">${books[i].title}</div>
+        <div class="author">${books[i].author}</div>
+        </div>
+        <div class="removeBtnCont">
+        <button class="removeBook">Remove Book</button>
+        </div>
+        </div>`; 
+    addedBooks.innerHTML += html;
+    }
+
+    //create Remove button dynamically
+    removeBtn = document.querySelectorAll('.removeBook');
+    for (let i = 0; i < books.length; i +=1) {
+        removeBtn[i].addEventListener('click', () => {
+            remove(i);
+            print();
+        });
+    }
+
+ }
+
+
+
+
+
+
+
