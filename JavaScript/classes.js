@@ -18,6 +18,7 @@ class Book {
     });
   }
 
+  // display books
   displayBooks() {
     this.bookList.innerHTML = '';
     this.books.forEach((book, index) => {
