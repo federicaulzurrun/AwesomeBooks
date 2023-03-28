@@ -4,44 +4,59 @@ class Book {
     this.title = document.getElementById('title');
     this.author = document.getElementById('author');
     this.addBook = document.getElementById('submit');
-    this.bookList = document.getElementById('book-List');
-    
-    this.addBook.addEventListener('click', (e) => {
+    this.bookList = document.getElementById('bookList');
+    this.displayBooks();
+    this.addBook.addEventListener('submit', (e) => {
       e.preventDefault();
-      this.addBook();
-    })
+      this.addBooks();
+    });
+    this.bookList.addEventListener('click', (e) => {
+      if (e.target.classList.contains('removeBtn')) {
+        const bookIndex = e.target.dataset.BookIndex;
+        this.removeBook(bookIndex);
+      }
+    });
   }
-}
 
-// add book
-function addBooks() {
-  if (this.title.value !== '' && this.author.value !== '') {
-    const title = this.title.value;
-    const author = this.author.value;
-
-    books.push({ title, author });
-    // save book to localstorage separatedly
-    localStorage.setItem('createdBooks', JSON.stringify(this.books));
-    this.title.value = ' ';
-    this.author.value = ' ';
-  }
-}
-
-function displayBooks () {
-  this.bookList.innerHTML = ' ';
-  this.books.forEach((books, i) => {
-    const html = `
-    <div class="newBook">
-    <div class="book-info">
-        <div class="title">${books[i].title}</div>
-        <div class="author">${books[i].author}</div>
-        </div>
-        </div>`;
+  displayBooks() {
+    this.bookList.innerHTML = '';
+    this.books.forEach((book, index) => {
+      const li = document.createElement('li');
+      li.classList.add('book-info');
+      li.innerHTML = `"${book.title}" by ${book.author}`;
       const removeBtn = document.createElement('button');
       removeBtn.textContent = 'Remove';
       removeBtn.classList.add('removeBtn');
-      removeBtn.setAttribute('book-index', i);
-      
-    
-    })
+      removeBtn.setAttribute('book-index', index);
+      li.appendChild(removeBtn);
+      this.bookList.appendChild(li);
+    });
+  }
+
+  // add book
+  addBooks() {
+    if (this.title.value !== '' && this.author.value !== '') {
+      const title = this.title.value;
+      const author = this.author.value;
+      this.books.push({ title, author });
+      // save book to localstorage separatedly
+      localStorage.setItem('createdBooks', JSON.stringify(this.books));
+      this.title.value = ' ';
+      this.author.value = ' ';
+    }
+  }
+
+  // remove book
+  removeBook(bookIndex) {
+    this.books.splice(bookIndex, 1);
+    localStorage.setItem('createdBooks', JSON.stringify(this.books));
+    this.displayBooks();
+  }
+}
+
+const awesomeBooks = new Book();
+
+if (localStorage.getItem('createdBooks')) {
+  awesomeBooks.books = JSON.parse(localStorage.getItem('createdBooks'));
+  awesomeBooks.displayBooks();
 }
