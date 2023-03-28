@@ -14,7 +14,7 @@ class Book {
 }
 
 // add book
-addBooks(){
+function addBooks() {
   if (this.title.value !== '' && this.author.value !== '') {
     const title = this.title.value;
     const author = this.author.value;
@@ -25,4 +25,23 @@ addBooks(){
     this.title.value = ' ';
     this.author.value = ' ';
   }
+}
+
+function displayBooks () {
+  this.bookList.innerHTML = ' ';
+  this.books.forEach((books, i) => {
+    const html = `
+    <div class="newBook">
+    <div class="book-info">
+        <div class="title">${books[i].title}</div>
+        <div class="author">${books[i].author}</div>
+        </div>
+        </div>`;
+      const removeBtn = document.createElement('button');
+      removeBtn.textContent = 'Remove';
+      removeBtn.classList.add('removeBtn');
+      removeBtn.setAttribute('book-index', i);
+      
+    
+    })
 }
