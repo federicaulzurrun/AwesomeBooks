@@ -12,20 +12,18 @@ body {
   height: 100%;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  width: 100%;
+header {
+  margin: 0;
 }
 
 .navBar {
   display: flex;
   border: #000 3px solid;
   align-items: center;
-  margin: 0.5% 2%;
-  width: 100%;
+  margin: 0.5% 1%;
+  width: 98%;
   justify-content: space-between;
+  justify-self: center;
 }
 
 .nbTitle {
@@ -39,12 +37,19 @@ nav {
   padding-right: 1%;
 }
 
+.list {
+  width: 90%;
+  align-self: center;
+  justify-content: center;
+}
+
 .bookList-add-contact {
   display: flex;
-  width: 100%;
+  width: 90%;
   list-style: none;
   padding: 0;
-  justify-content: space-around;
+  justify-content: end;
+  gap: 3px;
 }
 
 .bookList-add-contact li {
@@ -63,9 +68,26 @@ span {
   align-self: center;
 }
 
+#datetime {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
 h1 {
   display: flex;
   justify-content: center;
+  margin: 0 2%;
 }
 
 .book-list-conatiner {
@@ -79,7 +101,7 @@ h1 {
   justify-content: center;
 }
 
-#bookList{
+#bookList {
   display: flex;
   flex-direction: column;
   border: #000 3px solid;
@@ -162,7 +184,7 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1% 6%;
+  margin: 1% 3%;
   border: #000 3px solid;
   gap: 20px;
 }

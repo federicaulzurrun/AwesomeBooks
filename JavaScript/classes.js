@@ -1,11 +1,13 @@
 // Add date and time
 const dateTime = new Date();
-const date = dateTime.toLocaleDateString();
+const date = dateTime.toLocaleDateString('en', {
+  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+});
 const time = dateTime.toLocaleTimeString();
 const dateTimeElement = document.getElementById('datetime');
 dateTimeElement.textContent = `${date} ${time}`;
 
-//navbar functionality
+// navbar functionality
 const navlist = document.querySelector('.navList');
 const navadd = document.querySelector('.navAdd');
 const navcont = document.querySelector('.navCont');
