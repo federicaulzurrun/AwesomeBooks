@@ -1,3 +1,85 @@
+* {
+  font-family: 'Comic Neue', cursive;
+  margin: 2% 2%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+}
+
 h1 {
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+}
+
+.book-list-conatiner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  border: #000 3px solid;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: lightgray;
+  margin: 0;
+  align-self: center;
+}
+
+li p {
+  font-size: 14px;
+}
+
+li:nth-child(even) {
+  background-color: #fff;
+}
+
+button {
+  border: #000 2.5px solid;
+  background-color: #fff;
+  box-shadow: 1.5px 2px #000;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
+  padding: 0 3%;
+}
+
+input {
+  border: #000 2.5px solid;
+}
+
+#submit {
+  border: #000 2.5px solid;
+  background-color: #fff;
+  font-family: 'Comic Neue', cursive;
+  width: 25%;
+  align-self: flex-end;
+  padding: 0 3%;
 }
