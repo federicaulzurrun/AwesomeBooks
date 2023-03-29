@@ -23,19 +23,23 @@
           <li class="navCont">Contact</li>
       </ul>
     </nav>
-  <!--1rst page-->
+  
   </header>
+  <!--1rst page-->
   <!--Added Books-->
   <main>
+    <p id="datetime"></p>
+    <div class="list">
     <h1>Awesome Books</h1>
     <div class="book-list-container">
       <h2 class="subtitle">All Awesome Books</h2>
       <!--JavaScript Dynamic Book List-->
       <ul id="bookList"></ul>
     </div>
+  </div>
   </main>
   <!--Add a book form-->
-  <div class="form-container">
+  <div class="form-container hide">
     <h2 class="subtitle">Add a Book</h2>
       <form class= "add-form" id="add-form">
         <input type="text" required placeholder="Title of the book" id="title">
@@ -44,7 +48,7 @@
       </form>
   </div>
   <!--Contact Information-->
-  <div class="contact-info">
+  <div class="contact-info hide">
     <h2>Contact Information</h2>
     <h3>Do you have any questions or you just want to say "Hello"?</h3>
     <h4>You can reach out us!</h4>
