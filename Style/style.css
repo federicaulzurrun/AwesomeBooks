@@ -47,6 +47,10 @@ nav {
   justify-content: space-around;
 }
 
+.bookList-add-contact li {
+  cursor: pointer;
+}
+
 .navAdd {
   display: flex;
 }
@@ -165,4 +169,8 @@ footer {
 
 footer h6 {
   font-size: 12px;
+}
+
+.hide {
+  display: none;
 }
