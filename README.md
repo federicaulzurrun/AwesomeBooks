@@ -45,7 +45,7 @@ First i use HTML 5 thas it's markup languange used for structuring and presentin
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- <a href="https://federicaulzurrun.github.io/CapstoneModuleOne/"> Visit the site!</a>
+- <a href=""> Visit the site!</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -68,44 +68,13 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-  git clone https://github.com/federicaulzurrun/CapstoneModuleOne.git
+  git clone https://github.com/federicaulzurrun/AwesomeBooks.git
 
 ### Install
 
-Install this project linters: *do not change the any config file in any way*                                                          .
-
-1 - Create a .github folder that contains the workflows folder (reulst will look like .github/workflows in your VSC), then add a copy of the following file linters.yml. This way you now have Lightouse installed
-
-2 - To instal Webhint, if you are using Windows, you will need to initialize npm and create a package.json file, you can do that with the following command: npm init -y.
-
-- 2.1 After that, you will have to run npm install --save-dev hint@7.x
-
-- 2.2 Then, you have to create a .hintrc file and copy its content.
-
-- 2.3 Run npx hint .
-
-- 2.4 Fix your validations errors
-
-3 - To install Stylelint to avoid errors and enforce conventions in styles.
-
-- 3.1 Run npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-
-- 3.2 Create a .stylelintrc.json file and copy its content.
-
-- 3.3 Run npx stylelint "**/*.{css,scss}" on the root of your directory of your project.
-
-- 3.4 Fix linter errors.
-
-4- To install ESlint to avoid errors and enforce conventions in JavaScript.
-
-- 4.1 Run npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
-
-- 4.2 Create a .eslintrc.json file and copy its content.
-
-- 4.3 Run npx stylelint "npx eslint ." on the root of your directory of your project.
-
-- 4.4 Fix linter errors.
-
+```sh
+npm install
+```
 
 ### Usage
 
