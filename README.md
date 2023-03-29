@@ -43,9 +43,10 @@ First i use HTML 5 thas it's markup languange used for structuring and presentin
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 🚀 Live Demo <a name="https://federicaulzurrun.github.io/AwesomeBooks/"></a>
 
-- <a href=""> Visit the site!</a>
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- <a href="https://merry-elf-283198.netlify.app/"> Visit the site!</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -154,7 +155,7 @@ If you like this project let me know via twitter ! and i'll follow you!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank International Conference on Interdisciplinary Social Sciences for allowing me to use their information to create this page and to trust me with this project for their future conference.
+Thanks to Microverse for letting us do this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

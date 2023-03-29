@@ -3,16 +3,91 @@
   margin: 2% 2%;
 }
 
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+header {
+  margin: 0;
+}
+
+.navBar {
+  display: flex;
+  border: #000 3px solid;
+  align-items: center;
+  margin: 0.5% 1%;
+  width: 98%;
+  justify-content: space-between;
+  justify-self: center;
+}
+
+.nbTitle {
+  padding-left: 4%;
+}
+
+nav {
+  display: flex;
+  width: 50%;
+  margin: 0;
+  padding-right: 1%;
+}
+
+.list {
+  width: 90%;
+  align-self: center;
+  justify-content: center;
+}
+
+.bookList-add-contact {
+  display: flex;
+  width: 90%;
+  list-style: none;
+  padding: 0;
+  justify-content: end;
+  gap: 3px;
+}
+
+.bookList-add-contact li {
+  cursor: pointer;
+}
+
+.navAdd {
+  display: flex;
+}
+
+span {
+  margin: 0;
+  background-color: #000;
+  height: 90%;
+  width: 1px;
+  align-self: center;
+}
+
+#datetime {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+
 main {
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: center;
+  margin: 0;
   width: 100%;
 }
 
 h1 {
   display: flex;
   justify-content: center;
+  margin: 0 2%;
 }
 
 .book-list-conatiner {
@@ -26,7 +101,7 @@ h1 {
   justify-content: center;
 }
 
-ul {
+#bookList {
   display: flex;
   flex-direction: column;
   border: #000 3px solid;
@@ -34,7 +109,7 @@ ul {
   padding: 0;
 }
 
-li {
+.book-infocss {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -82,4 +157,42 @@ input {
   width: 25%;
   align-self: flex-end;
   padding: 0 3%;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 10%;
+}
+
+.contact-info h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-ul li {
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1% 3%;
+  border: #000 3px solid;
+  gap: 20px;
+}
+
+footer h6 {
+  font-size: 12px;
+}
+
+.hide {
+  display: none;
 }

@@ -11,23 +11,59 @@
     <title>AwesomeBooks</title>
 </head>
 <body>
+  <header class ="navBar">
+    <!--Navigation bar-->
+    <div class="nbTitle">Awesome Books</div>
+    <nav>
+      <ul class="bookList-add-contact">
+          <li class="navList">List</li>
+          <span></span>
+          <li class="navAdd">Add new</li>
+          <span></span>
+          <li class="navCont">Contact</li>
+      </ul>
+    </nav>
+  
+  </header>
+  <p id="datetime"></p>
+  <!--1rst page-->
+  <!--Added Books-->
   <main>
+    <div class="list">
     <h1>Awesome Books</h1>
     <div class="book-list-container">
       <h2 class="subtitle">All Awesome Books</h2>
       <!--JavaScript Dynamic Book List-->
       <ul id="bookList"></ul>
     </div>
-        <!--Add a book form-->
-    <div class="form-container">
-      <h2 class="subtitle">Add a Book</h2>
-        <form id="add-form">
-          <input type="text" required placeholder="Title of the book" id="title">
-          <input type="text" required placeholder="Author of the book" id="author">
-          <button type="submit" id="submit">Add</button>
-        </form>
-    </div>
+  </div>
   </main>
+  <!--Add a book form-->
+  <div class="form-container hide">
+    <h2 class="subtitle">Add a Book</h2>
+      <form class= "add-form" id="add-form">
+        <input type="text" required placeholder="Title of the book" id="title">
+        <input type="text" required placeholder="Author of the book" id="author">
+        <button type="submit" id="submit">Add</button>
+      </form>
+  </div>
+  <!--Contact Information-->
+  <div class="contact-info hide">
+    <h2>Contact Information</h2>
+    <h3>Do you have any questions or you just want to say "Hello"?</h3>
+    <h4>You can reach out us!</h4>
+    <ul class="contact-ul">
+      <li>Our e-mail: mail@gmail.com</li>
+      <li>Our phone number: 0000004333</li>
+      <li>Our address: Argentina 12345</li>
+    </ul>
+  </div>
+
+  <!--Footer-->
+  <footer>
+    <h6>Copyright</h6>
+    <p>...</p>
+  </footer>
 
     <!--<script src="./JavaScript/main.js"></script>-->
     <!--link to new js file for classes-->
