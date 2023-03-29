@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Style/style.css">
     <title>AwesomeBooks</title>
 </head>
 <body>
-    <main>
-        <h1>Awesome Books</h1>
-        <div class="book-list-container">
-            <h2 class="subtitle">Book List</h2>
-            <!--JavaScript Dynamic Book List-->
-            <div class="book-list" id="book-list"></div>
-        </div>
-    </main>
-
-    <!--Add a book form-->
+  <main>
+    <h1>Awesome Books</h1>
+    <div class="book-list-container">
+      <h2 class="subtitle">All Awesome Books</h2>
+      <!--JavaScript Dynamic Book List-->
+      <ul id="bookList"></ul>
+    </div>
+        <!--Add a book form-->
     <div class="form-container">
-        <h2 class="subtitle">Add a Book</h2>
+      <h2 class="subtitle">Add a Book</h2>
         <form id="add-form">
-            <input type="text" required placeholder="Title of the book" id="title">
-            <input type="text" required placeholder="Author of the book" id="author">
-            <button id="submit">Submit</button>
+          <input type="text" required placeholder="Title of the book" id="title">
+          <input type="text" required placeholder="Author of the book" id="author">
+          <button type="submit" id="submit">Add</button>
         </form>
     </div>
+  </main>
 
-    <script src="./JavaScript/main.js"></script>   
+    <!--<script src="./JavaScript/main.js"></script>-->
+    <!--link to new js file for classes-->
+    <script src="./JavaScript/classes.js"></script> 
 </body>
 </html>
