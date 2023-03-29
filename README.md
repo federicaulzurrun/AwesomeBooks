@@ -23,7 +23,7 @@
 
 
 
-# 📖 [Awesome Books] <a name="about-project"></a>
+# 📖 Awesome Books <a name="about-project"></a>
 
 
 **Awesome Books**  We created this project using a wireframe with plain JavaScript.
@@ -43,7 +43,7 @@ First i use HTML 5 thas it's markup languange used for structuring and presentin
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 🚀 Live Demo <a name="https://flourishing-concha-90ed27.netlify.app/"></a>
+## 🚀 Live Demo <a name="https://federicaulzurrun.github.io/AwesomeBooks/"></a>
 
 - <a href=""> Visit the site!</a>
 
